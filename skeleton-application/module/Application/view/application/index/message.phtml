@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @var $messages array
+ */
+
+$form = $this->form;
+
+$filter = new \Zend\Filter\DateTimeFormatter();
+
+$filter->setFormat('G:i, j.m.Y');
+
+?>
+<?= $this->form()->openTag($form); ?>
+</br>
+<?= $this->formRow($form->get('email')); ?>
+</br>
+</br>
+<?= $this->formRow($form->get('body')); ?>
+</br>
+</br>
+<?= $this->formRow($form->get('submit')); ?>
+
+<?= $this->form()->closeTag($form); ?>
+
+
+<?php foreach($messages as $message): ?>
+
+    </br></br>
+<?= $message->getBody() ?>
+    </br>
+<?= $message->getEmail() . ' в ' . $filter->filter($message->getDateCreated()) ?>
+
+<?php endforeach; ?>
