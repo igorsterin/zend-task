@@ -13,6 +13,7 @@ use Application\Form\MessageForm;
 use Application\Form\GuestForm;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
+use Zend\Validator;
 
 class IndexController extends AbstractActionController
 {
@@ -63,8 +64,12 @@ class IndexController extends AbstractActionController
         if ($this->getRequest()->isPost()) {
             $data = $this->params()->fromPost();
             $form->setData($data);
-            $this->messageManager->addNewMessage($data);
-            $this->redirect()->refresh();
+            if($form->isValid())
+            {
+                $data = $form->getData();
+                $this->messageManager->addNewMessage($data);
+                $this->redirect()->refresh();
+            }
         }
         $messages = $this->entityManager->getRepository(Message::class)->findBy([], ['dateCreated'=>'DESC']);
        // $messages = $this->entityManager->getRepository(Message::class)->findAll();

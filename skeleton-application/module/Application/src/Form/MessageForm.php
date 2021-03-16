@@ -17,6 +17,9 @@ class MessageForm extends Form
 
         // Добавляем элементы формы
         $this->addElements();
+
+        //Правила валидации
+        $this->addInputFilter();
     }
 
     private function addElements()
@@ -52,5 +55,40 @@ class MessageForm extends Form
                        ],
                    ]);
 
+    }
+
+    private function addInputFilter()
+    {
+        // Используем стандартный InputFilter формы
+        $inputFilter = $this->getInputFilter();
+
+        $inputFilter->add(
+            [
+                'name' => 'email',
+                'required' => true,
+                'filters' => [
+                    ['name' => 'StringTrim'],
+                ],
+                'validators' => [
+                    [
+                        'name' => 'EmailAddress',
+                        'options' => [
+                            'allow' => \Zend\Validator\Hostname::ALLOW_DNS,
+                            'useMxCheck' => false,
+                        ],
+                    ],
+                ],
+            ]
+        );
+
+        $inputFilter->add(
+            [
+                'name' => 'body',
+                'required' => true,
+                'filters' => [
+                    ['name' => 'StripTags'],
+                ],
+            ]
+        );
     }
 }
