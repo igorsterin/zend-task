@@ -27,38 +27,8 @@ class IndexController extends AbstractActionController
         $this->messageManager = $messageManager;
     }
 
+
     public function indexAction()
-    {
-        return new ViewModel();
-    }
-
-    public function guestAction()
-    {
-        $form = new GuestForm();
-        if ($this->getRequest()->isPost()) {
-            $data = $this->params()->fromPost();
-            $form->setData($data);
-        }
-        return new ViewModel(
-            [
-                'form' => $form
-            ]
-        );
-    }
-
-    public function dbtestAction()
-    {
-        $posts = $this->entityManager->getRepository(Post::class)->findBy([], ['dateCreated'=>'DESC']);
-        return new ViewModel();
-    }
-
-    public function viewtestAction()
-    {
-        $vyvod = 's454e7546fs';
-        return new ViewModel(['vyvod' => $vyvod]);
-    }
-
-    public function messageAction()
     {
         $form = new MessageForm();
         if ($this->getRequest()->isPost()) {
@@ -72,7 +42,6 @@ class IndexController extends AbstractActionController
             }
         }
         $messages = $this->entityManager->getRepository(Message::class)->findBy([], ['dateCreated'=>'DESC']);
-       // $messages = $this->entityManager->getRepository(Message::class)->findAll();
         return new ViewModel(
             [
                 'form' => $form,
@@ -80,11 +49,5 @@ class IndexController extends AbstractActionController
             ]
         );
     }
-
-    public function escapeAction()
-    {
-        return new ViewModel();
-    }
-
 
 }

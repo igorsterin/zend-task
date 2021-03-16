@@ -39,7 +39,6 @@ return [
     ],
     'controllers' => [
         'factories' => [
-          //  Controller\IndexController::class => InvokableFactory::class,
             Controller\IndexController::class => Controller\Factory\IndexControllerFactory::class,
         ],
     ],

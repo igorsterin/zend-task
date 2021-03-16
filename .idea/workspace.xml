@@ -3,10 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="569c12aa-bc29-49a5-96bb-d477ddba4df5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-application/module/Application/config/module.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-application/module/Application/config/module.config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skeleton-application/module/Application/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-application/module/Application/src/Controller/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skeleton-application/module/Application/src/Form/MessageForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-application/module/Application/src/Form/MessageForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skeleton-application/module/Application/view/application/index/message.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-application/module/Application/view/application/index/message.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skeleton-application/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-application/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-application/module/Application/src/Entity/Post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-application/module/Application/src/Form/GuestForm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-application/module/Application/view/application/index/dbtest.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-application/module/Application/view/application/index/escape.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-application/module/Application/view/application/index/guest.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-application/module/Application/view/application/index/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-application/module/Application/view/application/index/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-application/module/Application/view/application/index/message.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-application/module/Application/view/application/index/viewtest.phtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skeleton-application/module/Application/view/layout/layout.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton-application/module/Application/view/layout/layout.phtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +121,7 @@
       <option name="presentableId" value="Default" />
       <updated>1615494381541</updated>
       <workItem from="1615494387446" duration="1446000" />
-      <workItem from="1615716863233" duration="54385000" />
+      <workItem from="1615716863233" duration="57663000" />
     </task>
     <servers />
   </component>
@@ -135,11 +142,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/skeleton-application/module/Application/src/Controller/IndexController.php</url>
-          <line>51</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/skeleton-application/module/Application/src/Service/MessageManager.php</url>
           <line>31</line>
